@@ -1,7 +1,7 @@
 import React from 'react';
 import { Accordion, Button, Card } from "react-bootstrap";
 
-const CountryCases = (props) => {
+const CountryCases = () => {
     return (
         <Accordion style={{ margin:'30px auto 20px auto', display:'block' }}>
             <Card>

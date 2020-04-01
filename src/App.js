@@ -14,28 +14,28 @@ class App extends Component {
     console.log("Hello");
   }
 
-  getCovidCaseSummary = () => {
-    axios.get(`https://covid-rest.herokuapp.com/summary`)
-      .then((res) => {
-        console.log(res);
-      });
-  }
+  // getCovidCaseSummary = () => {
+  //   axios.get(`https://covid-rest.herokuapp.com/summary`)
+  //     .then((res) => {
+  //       console.log(res);
+  //     });
+  // }
 
-  getCovidCaseAll = () => {
-    axios.get(`https://covid-rest.herokuapp.com/`)
-      .then((res) => {
-        console.log(res);
-      });
-  }
+  // getCovidCaseAll = () => {
+  //   axios.get(`https://covid-rest.herokuapp.com/`)
+  //     .then((res) => {
+  //       console.log(res);
+  //     });
+  // }
 
-  getCovidCasePerCountry = (e) => {
-    e.preventDefault();
-    const country = e.target.elements.country.value;
-    axios.get(`https://covid-rest.herokuapp.com/${country}`)
-      .then((res) => {
-        console.log(res);
-      });
-  }
+  // getCovidCasePerCountry = (e) => {
+  //   e.preventDefault();
+  //   const country = e.target.elements.country.value;
+  //   axios.get(`https://covid-rest.herokuapp.com/${country}`)
+  //     .then((res) => {
+  //       console.log(res);
+  //     });
+  // }
 
   render() {
     return (
