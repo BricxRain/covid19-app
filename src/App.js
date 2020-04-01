@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/layouts/Header';
+import GlobalCase from './components/GlobalCase';
+import CountryCases from './components/CountryCases';
+import Footer from './components/layouts/Footer';
+
+class App extends Component {
+
+  componentDidMount() {
+    axios.get(`https://covid-rest.herokuapp.com/summary`)
+      .then((res) => {
+        console.log(res);
+      });
+  }
+
+  getCovidCaseSummary = () => {
+    axios.get(`https://covid-rest.herokuapp.com/summary`)
+      .then((res) => {
+        console.log(res);
+      });
+  }
+
+  getCovidCaseAll = () => {
+    axios.get(`https://covid-rest.herokuapp.com/`)
+      .then((res) => {
+        console.log(res);
+      });
+  }
+
+  getCovidCasePerCountry = (e) => {
+    e.preventDefault();
+    const country = e.target.elements.country.value;
+    axios.get(`https://covid-rest.herokuapp.com/${country}`)
+      .then((res) => {
+        console.log(res);
+      });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <GlobalCase getCovidCaseSummary={this.getCovidCaseSummary} />
+        <CountryCases getCovidCaseAll={this.getCovidCaseAll} />
+        <Footer />
+      </div>
+    );
+  }
+
 }
 
 export default App;

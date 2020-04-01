@@ -1,0 +1,17 @@
+COVID 19 REST API
+Last day I have passed my time making a REST API service for CoVID-19 daily update. The reason I have made this service is to save time for application developers who are facing challenges to get CoVID-19 live data.
+Science, worldometers.info is not providing any counter or API  service for CoVID-19 daily updates currently and a few developer friends of mine looking for the same API, so I decided to wrap it up. 
+But the problem is, as their policy, using worldometer's data without permission is illegal. So I will upgrade the service after worldometers.info publishes their CoVID-19 API.
+Until then, the RESTful service is already deployed and ready to use. The endpoints are bellow
+
+GET ALL DATA
+http://covid-rest.herokuapp.com/
+
+GET BY COUNTRY NAME
+http://covid-rest.herokuapp.com/{country_name}
+
+GET SUMMARY
+http://covid-rest.herokuapp.com/summary
+
+Furthermore, this project is opensource and your collaboration is appreciable.
+https://github.com/dipanjal/covid19_api
