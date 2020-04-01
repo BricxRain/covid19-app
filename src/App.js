@@ -11,10 +11,7 @@ import Footer from './components/layouts/Footer';
 class App extends Component {
 
   componentDidMount() {
-    axios.get(`https://covid-rest.herokuapp.com/summary`)
-      .then((res) => {
-        console.log(res);
-      });
+    console.log("Hello");
   }
 
   getCovidCaseSummary = () => {
@@ -44,8 +41,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <GlobalCase getCovidCaseSummary={this.getCovidCaseSummary} />
-        <CountryCases getCovidCaseAll={this.getCovidCaseAll} />
+        <GlobalCase />
+        <CountryCases />
         <Footer />
       </div>
     );
