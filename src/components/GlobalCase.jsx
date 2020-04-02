@@ -102,7 +102,7 @@ class GlobalCase extends React.Component {
                                 bg='success'
                                 text='white'
                                 style={{ display:'block', borderRadius: '50px', fontWeight: 'bold' }}>
-                                <Card.Header>Total Recovered</Card.Header>
+                                <Card.Header>Recovered</Card.Header>
                                 <Card.Body>
                                     <Card.Title style={{ fontSize: '30px', fontWeight: '900' }}>
                                         <CountUp end={this.state.total_recovered} />
