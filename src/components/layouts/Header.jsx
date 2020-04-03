@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../logo.svg';
+import Logo from '../../covid.png';
 import { Nav, Navbar } from 'react-bootstrap';
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
                         className="d-inline-block align-top"
                         alt="React Bootstrap logo"
                     />
-                    Covid-19 Cases
+                    Covid-19 App
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

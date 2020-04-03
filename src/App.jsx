@@ -19,28 +19,28 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // axios.get(`http://localhost:8000/api/covid-case/summary`)
+    // axios.get(`https://workbook-web.herokuapp.com/api/covid-case/summary`)
     //   .then((res) => {
     //     const summary = res.data.data;
     //     this.setState({summary});
     //     this.setState({isLoadedSummary: true})
     //   });
 
-    // axios.get(`http://localhost:8000/api/covid-case/`)
+    // axios.get(`https://workbook-web.herokuapp.com/api/covid-case/`)
     //   .then((res) => {
     //     const all = res.data;
     //     this.setState({all});
     //     this.setState({isLoadedAll: true})
     //   });
 
-    axios.get(`http://86770f6e.ngrok.io/api/covid-case/summary`)
+    axios.get(`https://workbook-web.herokuapp.com/api/covid-case/summary`)
       .then((res) => {
         const summary = res.data.data;
         this.setState({summary});
         this.setState({isLoadedSummary: true})
       });
 
-    axios.get(`http://86770f6e.ngrok.io/api/covid-case/`)
+    axios.get(`https://workbook-web.herokuapp.com/api/covid-case`)
       .then((res) => {
         const all = res.data;
         this.setState({all});
@@ -52,7 +52,7 @@ class App extends Component {
   // getCovidCasePerCountry = (e) => {
   //   e.preventDefault();
   //   const country = e.target.elements.country.value;
-  //   axios.get(`http://localhost:8000/api/covid-case/${country}`)
+  //   axios.get(`https://workbook-web.herokuapp.com/api/covid-case/${country}`)
   //     .then((res) => {
   //       return res.data.data;
   //     });
