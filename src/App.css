@@ -12,3 +12,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+table.table th, table.table td {
+  padding: 5px !important
+}
+
+table.table th {
+  background-color: #e6e6e6;
+}

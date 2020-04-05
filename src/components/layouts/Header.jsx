@@ -5,7 +5,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 const Header = () => {
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Navbar.Brand href="#home">
                     <img
                         src={Logo}

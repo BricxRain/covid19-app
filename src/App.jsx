@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Header from './components/layouts/Header';
+import SearchCountry from './components/SearchCountry';
 import GlobalCase from './components/GlobalCase';
 import CountryCases from './components/CountryCases';
 import Footer from './components/layouts/Footer';
@@ -19,34 +20,26 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // axios.get(`https://workbook-web.herokuapp.com/api/covid-case/summary`)
-    //   .then((res) => {
-    //     const summary = res.data.data;
-    //     this.setState({summary});
-    //     this.setState({isLoadedSummary: true})
-    //   });
+    this.loadCasesSummary();
+    this.loadCasesAll();
+  }
 
-    // axios.get(`https://workbook-web.herokuapp.com/api/covid-case/`)
-    //   .then((res) => {
-    //     const all = res.data;
-    //     this.setState({all});
-    //     this.setState({isLoadedAll: true})
-    //   });
-
+  loadCasesSummary() {
     axios.get(`https://workbook-web.herokuapp.com/api/covid-case/summary`)
       .then((res) => {
         const summary = res.data.data;
         this.setState({summary});
         this.setState({isLoadedSummary: true})
       });
+  }
 
+  loadCasesAll() {
     axios.get(`https://workbook-web.herokuapp.com/api/covid-case`)
       .then((res) => {
         const all = res.data;
         this.setState({all});
         this.setState({isLoadedAll: true})
       });
-      
   }
 
   // getCovidCasePerCountry = (e) => {
@@ -66,13 +59,16 @@ class App extends Component {
         { 
           this.state.isLoadedAll ? 
           
-          <Accordion style={{ margin:'30px 10px 20px 10px', display:'block' }}> 
-            {this.state.all.map((item, key) =>
-              <CountryCases case={item} id={key} key={key} />
-            )}
-          </Accordion> 
-          
-          : <Spinner style={{ marginTop: '50px' }} animation="grow" />
+          <div>
+            <SearchCountry />
+            <Accordion style={{ margin:'30px 10px 80px 10px', display:'block' }}> 
+              {this.state.all.map((item, key) =>
+                <CountryCases case={item} id={key} key={key} />
+              )}
+            </Accordion>
+          </div>
+
+          : <Spinner style={{ marginTop: '80px' }} animation="grow" />
         }
         <Footer />
       </div>

@@ -3,8 +3,8 @@ import { MDBContainer, MDBFooter } from "mdbreact";
 
 const Footer = () => {
     return (
-        <MDBFooter color="blue" className="font-small pt-1 pb-1 mt-4">
-            <div className="footer-copyright text-center py-3">
+        <MDBFooter fixed="bottom" color="blue" className="font-small pt-1 pb-1 mt-4 fixed-bottom ">
+            <div className="footer-copyright text-center py-2">
                 <MDBContainer fluid>
                 &copy; {new Date().getFullYear()} Copyright <a href="#footer"> Covid-19 App | Bricx Carasco </a>
                 </MDBContainer>

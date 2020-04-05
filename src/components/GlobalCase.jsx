@@ -26,18 +26,18 @@ class GlobalCase extends React.Component {
 
     render () {
         return (
-            <div className="col-12" style={{ margin:'20px auto 20px auto', display:'block' }}>
+            <div className="col-12" style={{ margin:'80px auto 50px auto', display:'block' }}>
                 <Container>
                     <Row style={{ marginBottom: '20px' }}>
                         <Col>
                             <Card
-                                bg='primary'
+                                bg='secondary'
                                 text='white'
-                                style={{ display:'block', borderRadius: '50px', fontWeight: 'bold' }}>
+                                style={{ display:'block', borderRadius: '0px', fontWeight: 'bold' }}>
                                 <Card.Header>Total Cases</Card.Header>
                                 <Card.Body>
-                                    <Card.Title style={{ fontSize: '30px', fontWeight: '900' }}>
-                                        <CountUp end={this.state.total_cases} />
+                                    <Card.Title style={{ fontSize: '27px', fontWeight: '900' }}>
+                                        <CountUp end={this.state.total_cases} separator=","/>
                                     </Card.Title>
                                     {/* <Card.Text style={{ color: 'white' }}>
                                     test
@@ -49,11 +49,11 @@ class GlobalCase extends React.Component {
                             <Card
                                 bg='warning'
                                 text='white'
-                                style={{ display:'block', borderRadius: '50px', fontWeight: 'bold' }}>
+                                style={{ display:'block', borderRadius: '0px', fontWeight: 'bold' }}>
                                 <Card.Header>New Cases</Card.Header>
                                 <Card.Body>
-                                    <Card.Title style={{ fontSize: '30px', fontWeight: '900' }}>
-                                        <CountUp end={this.state.new_cases} />
+                                    <Card.Title style={{ fontSize: '28px', fontWeight: '900' }}>
+                                        + <CountUp end={this.state.new_cases} separator=","/>
                                     </Card.Title>
                                     {/* <Card.Text style={{ color: 'white' }}>
                                     test
@@ -67,11 +67,11 @@ class GlobalCase extends React.Component {
                             <Card
                                 bg='danger'
                                 text='white'
-                                style={{ display:'block', borderRadius: '50px', fontWeight: 'bold' }}>
+                                style={{ display:'block', borderRadius: '0px', fontWeight: 'bold' }}>
                                 <Card.Header>Total Death</Card.Header>
                                 <Card.Body>
-                                    <Card.Title style={{ fontSize: '30px', fontWeight: '900' }}>
-                                        <CountUp end={this.state.total_death} />
+                                    <Card.Title style={{ fontSize: '28px', fontWeight: '900' }}>
+                                        <CountUp end={this.state.total_death} separator=","/>
                                     </Card.Title>
                                     {/* <Card.Text style={{ color: 'white' }}>
                                     test
@@ -81,13 +81,13 @@ class GlobalCase extends React.Component {
                         </Col>
                         <Col>
                             <Card
-                                bg='dark'
+                                bg='primary'
                                 text='white'
-                                style={{ display:'block', borderRadius: '50px', fontWeight: 'bold' }}>
+                                style={{ display:'block', borderRadius: '0px', fontWeight: 'bold' }}>
                                 <Card.Header>New Death</Card.Header>
                                 <Card.Body>
-                                    <Card.Title style={{ fontSize: '30px', fontWeight: '900' }}>
-                                        <CountUp end={this.state.new_death} />
+                                    <Card.Title style={{ fontSize: '28px', fontWeight: '900' }}>
+                                        + <CountUp end={this.state.new_death} separator=","/>
                                     </Card.Title>
                                     {/* <Card.Text style={{ color: 'white' }}>
                                     test
@@ -101,11 +101,11 @@ class GlobalCase extends React.Component {
                             <Card
                                 bg='success'
                                 text='white'
-                                style={{ display:'block', borderRadius: '50px', fontWeight: 'bold' }}>
+                                style={{ display:'block', borderRadius: '0px', fontWeight: 'bold' }}>
                                 <Card.Header>Recovered</Card.Header>
                                 <Card.Body>
-                                    <Card.Title style={{ fontSize: '30px', fontWeight: '900' }}>
-                                        <CountUp end={this.state.total_recovered} />
+                                    <Card.Title style={{ fontSize: '28px', fontWeight: '900' }}>
+                                        <CountUp end={this.state.total_recovered} separator=","/>
                                     </Card.Title>
                                     {/* <Card.Text style={{ color: 'white' }}>
                                     test
@@ -117,11 +117,11 @@ class GlobalCase extends React.Component {
                             <Card
                                 bg='info'
                                 text='white'
-                                style={{ display:'block', borderRadius: '50px', fontWeight: 'bold' }}>
+                                style={{ display:'block', borderRadius: '0px', fontWeight: 'bold' }}>
                                 <Card.Header>Active Cases</Card.Header>
                                 <Card.Body>
-                                    <Card.Title style={{ fontSize: '30px', fontWeight: '900' }}>
-                                        <CountUp end={this.state.active_cases} />
+                                    <Card.Title style={{ fontSize: '28px', fontWeight: '900' }}>
+                                        <CountUp end={this.state.active_cases} separator=","/>
                                     </Card.Title>
                                     {/* <Card.Text style={{ color: 'white' }}>
                                     test
